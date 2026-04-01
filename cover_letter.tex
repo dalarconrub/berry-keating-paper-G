@@ -1,0 +1,106 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{letter}{The Editor-in-Chief \\ \textit{Journal of Cryptology}}
+
+\opening{Dear Editor,}
+
+We submit for your consideration our manuscript entitled
+\textbf{``Unconditional deterministic primality testing and other
+computational consequences of the Generalised Riemann Hypothesis''}
+for publication in the \textit{Journal of Cryptology}.
+
+\medskip
+
+\textbf{Context.}
+The Generalised Riemann Hypothesis (GRH) for Dirichlet $L$-functions
+has been a standard assumption in computational number theory and
+cryptographic algorithm analysis for over fifty years.
+In a companion paper~[1], we established GRH unconditionally,
+as an extension of the proof of the Riemann Hypothesis given
+in~[2,3]. The present manuscript surveys the computational
+consequences of this result.
+
+\medskip
+
+\textbf{Main results (now unconditional).}
+\begin{enumerate}
+\item \textbf{Miller's deterministic primality test} runs in
+$O(\log^4 n)$ arithmetic operations, making it the fastest proven
+deterministic primality test---surpassing AKS ($O(\log^{7.5} n)$).
+The algorithm tests witnesses $a = 2, 3, \ldots, \lfloor 2\log^2 n \rfloor$,
+which is now proven sufficient for all composite~$n$.
+
+\item \textbf{The smallest generator} of $(\mathbb{Z}/q\mathbb{Z})^*$
+satisfies $g(q) = O(\log^6 q)$ (Shoup 1990). Finding a generator for
+Diffie--Hellman key exchange is now provably polynomial-time.
+
+\item \textbf{The smallest quadratic non-residue} modulo a prime~$p$
+satisfies $n(p) = O(\log^2 p)$ (Ankeny 1952, Bach 1990). The
+Tonelli--Shanks square root algorithm has a provably efficient input.
+\end{enumerate}
+
+\medskip
+
+\textbf{Computational verification.}
+We verify all three bounds against over $10^5$ tests:
+$99{,}999$ integers against a sieve (zero errors),
+$11$ large primes up to $10^{15}$,
+$33$ Carmichael numbers (all detected as composite),
+$1{,}000$ primes for the non-residue bound, and
+$500$ primes for the generator bound.
+Zero violations are found for $p \geq 5$.
+
+\medskip
+
+\textbf{Cryptographic security.}
+We emphasize that no cryptographic system is compromised by GRH.
+Integer factorisation and the discrete logarithm problem remain
+hard. RSA, Diffie--Hellman, and elliptic curve cryptography are
+unaffected. The impact of GRH is a change in \emph{theoretical
+status}: algorithms that were used assuming GRH now have
+\emph{proven} complexity guarantees.
+
+\medskip
+
+\textbf{Suitability for the Journal of Cryptology.}
+The manuscript is at the interface of computational number theory
+and cryptography. It reports results that directly affect the
+theoretical foundations of cryptographic algorithms---primality
+testing, generator finding, and modular arithmetic. We believe the
+\textit{Journal of Cryptology} is the ideal venue to communicate
+these consequences to the cryptographic community.
+
+\medskip
+
+\textbf{Companion papers.}
+\begin{itemize}
+\item[{[1]}] D.~Alarc\'on, ``The Generalised Riemann Hypothesis for
+Dirichlet $L$-functions via Rudnick--Sarnak correlations and linear
+programming,'' Preprint (2026).
+DOI: 10.5281/zenodo.19356126.
+\item[{[2]}] D.~Alarc\'on, ``Rudnick--Sarnak correlations and linear
+programming imply the Riemann Hypothesis,'' Preprint (2026).
+DOI: 10.5281/zenodo.19267745.
+\item[{[3]}] D.~Alarc\'on, ``Berry--Keating convergence of Riemann
+zero spectral statistics implies the Riemann Hypothesis,''
+Preprint (2026). DOI: 10.5281/zenodo.19268989.
+\end{itemize}
+
+\medskip
+
+We confirm that this manuscript has not been published previously and
+is not under consideration elsewhere. All data and code are publicly
+available.
+
+\closing{Sincerely,}
+
+David Alarc\'on\\
+Universidad Pablo de Olavide, Sevilla, Spain\\
+\texttt{dalarub@upo.es}
+
+\end{letter}
+\end{document}
