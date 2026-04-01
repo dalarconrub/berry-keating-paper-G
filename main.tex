@@ -310,7 +310,9 @@ always 2, 3, or 5.}
 %% ================================================================
 \section{Further consequences}\label{sec:further}
 
-GRH has many other consequences that now become unconditional:
+Beyond the three main results, GRH makes several other important
+theorems unconditional. Table~\ref{tab:results} summarises these;
+we discuss the most significant below.
 
 \begin{table}[ht]
 \centering
@@ -330,6 +332,43 @@ Goldbach exceptional set & M--V 1975 & $E(N) = O(N^{1/2+\varepsilon})$ \\
 \caption{Results that become unconditional with GRH.}
 \label{tab:results}
 \end{table}
+
+\paragraph{Primes in arithmetic progressions.}
+The prime counting function in an arithmetic progression
+$a, a{+}q, a{+}2q, \ldots$ satisfies, under GRH (now proven):
+\[
+\psi(x;\, q, a) = \frac{x}{\varphi(q)}
++ O\!\left(\sqrt{x}\,\log^2(qx)\right)
+\]
+for each individual modulus~$q$. Previously, only the
+Bombieri--Vinogradov theorem provided useful bounds, and only
+\emph{on average} over~$q$. The GRH bound is an \emph{individual}
+guarantee for each progression---a qualitative improvement.
+
+\paragraph{Linnik's constant.}
+The least prime $p \equiv a \pmod{q}$ satisfies $p \leq q^L$.
+The best unconditional result is $L \leq 5$ (Xylouris, 2011).
+Under GRH: $L = 2 + \varepsilon$. This sharper bound is now proven,
+meaning that every admissible arithmetic progression contains a
+prime within $q^{2+\varepsilon}$.
+
+\paragraph{Artin's conjecture on primitive roots.}
+Hooley~\cite{Hooley1967} proved under GRH that every non-square
+integer $g \neq -1$ is a primitive root for infinitely many primes,
+with positive density. This is now unconditional for Dirichlet
+characters. (The full Artin conjecture over number field extensions
+requires the Extended RH for $\mathrm{GL}_n$ with $n \geq 2$,
+which is not yet established.)
+
+\paragraph{Goldbach exceptional set.}
+Montgomery and Vaughan~\cite{MontgomeryVaughan1975} showed under GRH
+that $E(N) = O(N^{1/2+\varepsilon})$, where $E(N)$ counts even integers
+$2n \leq N$ that are not the sum of two primes. This is now
+unconditional: almost all even integers are Goldbach numbers.
+Note, however, that the binary Goldbach conjecture (``all sufficiently
+large even integers'') remains open, as the Hardy--Littlewood
+asymptotic formula requires bounding minor-arc exponential sums,
+which GRH does not resolve.
 
 
 %% ================================================================
